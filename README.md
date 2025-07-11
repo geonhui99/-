@@ -45,11 +45,24 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
+   "cell_type": "markdown",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "source": [
+    "- **세 명의 수험생 점수를 입력받는다.**\n",
+    "- 각 점수를 `int()` 함수로 정수로 변환한 뒤, **점수의 합을 계산**한다.\n",
+    "- **점수의 합을 출력**한다.\n",
+    "\n",
+    "```python\n",
+    "score1 = int(input())\n",
+    "score2 = int(input())\n",
+    "score3 = int(input())\n",
+    "\n",
+    "total_score = score1 + score2 + score3\n",
+    "print(total_score)\n",
+    "```\n",
+    "\n",
+    " `input()`을 사용하여 세 명의 점수를 입력받고, 각각 `int()`로 변환하여 정수로 처리합니다."
+   ]
   },
   {
    "cell_type": "markdown",
@@ -72,13 +85,30 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "vjUhNFdBYo2n"
-   },
-   "outputs": [],
-   "source": []
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<aside>\n",
+    "🔑 정답 : movie.insert(2, '비밀')\n",
+    "\n",
+    "<br>\n",
+    "\n",
+    "Python 리스트에서 특정 위치에 값을 추가하려면 `insert()` 메소드를 사용할 수 있습니다. \n",
+    "`insert()` 메소드는 첫 번째 인자로 삽입할 위치의 인덱스를, 두 번째 인자로 삽입할 값을 받습니다.\n",
+    "\n",
+    "\"비밀\"을 \"나폴레옹\"과 \"괴물\" 사이에 추가하는 코드는 아래와 같습니다.\n",
+    "\n",
+    "```python\n",
+    "movie.insert(2,'비밀')\n",
+    "print(movie)\n",
+    "```\n",
+    "\n",
+    "위 코드에서 `2`는 \"비밀\"이 추가될 위치의 인덱스이며, 파이썬에서 리스트의 인덱스는 0부터 시작하기 때문에 \"나폴레옹\"(인덱스 1) 다음에 \"비밀\"을 추가하기 위해 `2`를 사용합니다. `'비밀'`은 추가할 값입니다.\n",
+    "\n",
+    "이렇게 하면 `movie` 리스트는 `['서울의 봄', '나폴레옹', '비밀', '괴물', '베트맨']`과 같이 \"비밀\"이 \"나폴레옹\"과 \"괴물\" 사이에 추가됩니다.\n",
+    "\n",
+    "</aside>"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -106,13 +136,30 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "cPezrT7cYreh"
-   },
-   "outputs": [],
-   "source": []
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<aside>\n",
+    "🔑 정답 : movie.remove(’베트맨’)\n",
+    "\n",
+    "<br>\n",
+    "\n",
+    "Python 리스트에서 특정 값을 삭제하려면 `remove()` 함수를 사용할 수 있습니다. `remove()` 함수는 리스트에서 첫 번째로 나타나는 특정 값을 제거합니다.\n",
+    "\n",
+    "따라서 '베트맨'을 삭제하려면 다음과 같이 코드를 작성할 수 있습니다.\n",
+    "\n",
+    "```python\n",
+    "movie.remove('베트맨')\n",
+    "print(movie)\n",
+    "```\n",
+    "\n",
+    "이 코드는 `movie` 리스트에서 '베트맨'이라는 값을 찾아 제거합니다. \n",
+    "이렇게 하면 `movie` 리스트는 `['서울의 봄', '나폴레옹', '비밀', '괴물']`이 됩니다.\n",
+    "\n",
+    "단, `remove()` 함수는 리스트에서 해당 값이 없을 경우 ValueError를 발생시키므로, 해당 값이 리스트에 있는지 확인한 후 삭제하는 것이 안전합니다.\n",
+    "\n",
+    "</aside>"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -134,11 +181,40 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
+   "cell_type": "markdown",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "source": [
+    "<aside>\n",
+    "🔑 정답 : lang1+lang2, lang1.extend(lang2)\n",
+    "\n",
+    "<br>\n",
+    "\n",
+    "Python에서는 '+' 연산자를 사용하여 두 개의 리스트를 합칠 수 있습니다.\n",
+    "\n",
+    "```python\n",
+    "lang1 = [\"C\", \"C++\", \"JAVA\"]\n",
+    "lang2 = [\"Python\", \"Go\", \"C#\"]\n",
+    "\n",
+    "langs = lang1 + lang2\n",
+    "print(langs)\n",
+    "```\n",
+    "\n",
+    "이 코드에서, `lang1`과 `lang2` 두 리스트가 '+' 연산자를 통해 하나의 리스트로 합쳐졌습니다. 이렇게 만들어진 `langs` 리스트는 `[\"C\", \"C++\", \"JAVA\", \"Python\", \"Go\", \"C#\"]` 이렇게 됩니다.\n",
+    "\n",
+    "이 방법 외에도 `extend()` 함수를 사용해서도 두 리스트를 합칠 수 있습니다.\n",
+    "\n",
+    "```python\n",
+    "lang1 = [\"C\", \"C++\", \"JAVA\"]\n",
+    "lang2 = [\"Python\", \"Go\", \"C#\"]\n",
+    "\n",
+    "lang1.extend(lang2)\n",
+    "print(lang1)\n",
+    "```\n",
+    "\n",
+    "`extend()` 함수는 리스트의 끝에 다른 리스트의 모든 항목을 추가합니다. 따라서 이 코드를 실행하면 `lang1` 리스트는 `[\"C\", \"C++\", \"JAVA\", \"Python\", \"Go\", \"C#\"]` 이렇게 변하게 됩니다.\n",
+    "\n",
+    "</aside>"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -165,11 +241,26 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
+   "cell_type": "markdown",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "source": [
+    "정답 : max(nums) , min(nums), sum(nums) / len(nums)\n",
+    "\n",
+    "<br>\n",
+    "Python에서는 max() 함수와 min() 함수를 사용하여 리스트의 최댓값과 최솟값을 구할 수 있습니다. 또한 sum() 함수는 리스트의 모든 요소를 더한 값을 반환하고, len() 함수는 리스트의 길이를 반환합니다.\n",
+    "\n",
+    "```python\n",
+    "nums = [1, 2, 3, 4, 5, 6, 7, 9, 10]\n",
+    "\n",
+    "max_value = max(nums)  # 최댓값\n",
+    "min_value = min(nums)  # 최솟값\n",
+    "average_value = sum(nums) / len(nums)  # 평균\n",
+    "\n",
+    "print(\"최댓값:\", max_value)\n",
+    "print(\"최솟값:\", min_value)\n",
+    "print(\"평균:\", average_value)\n",
+    "```"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -192,19 +283,17 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "iRDvWnF8wTXa"
-   },
-   "outputs": [],
-   "source": []
-  },
-  {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "---"
+    "정답 : len(cook)\n",
+    "\n",
+    "\n",
+    "파이썬에서는 len() 함수를 사용하여 리스트에 저장된 데이터의 개수를 구할 수 있습니다.\n",
+    "```python\n",
+    "cook = [\"피자\", \"김밥\", \"만두\", \"양념치킨\", \"족발\", \"피자\", \"김치만두\", \"쫄면\"]\n",
+    "print(len(cook))\n",
+    "```"
    ]
   },
   {
@@ -232,13 +321,25 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "BpMb0bHPFdKF"
-   },
-   "outputs": [],
-   "source": []
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "정답 : price[1:]\n",
+    "\n",
+    "\n",
+    "price[1:]는 price 리스트의 첫 번째 인덱스부터 끝까지의 값을 선택합니다. \n",
+    "\n",
+    "따라서 이 코드는 '20180728'을 제외한 나머지 값을 가지는 새로운 리스트 new_price를 만듭니다. \n",
+    "\n",
+    "이렇게 슬라이싱을 사용하면 리스트의 특정 범위의 값을 쉽게 선택할 수 있습니다.\n",
+    "```python\n",
+    "price = ['20180728', 100, 130, 140, 150, 160, 170]\n",
+    "\n",
+    "new_price = price[1:]\n",
+    "\n",
+    "print(new_price)\n",
+    "```"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -269,13 +370,26 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "jADTPFzOHcKk"
-   },
-   "outputs": [],
-   "source": []
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "정답 : print(\"메로나 가격:\", ice['메로나'])\n",
+    "\n",
+    "\n",
+    "딕셔너리에서 특정 키에 대응하는 값을 찾으려면 딕셔너리[키] 형태로 접근합니다. \n",
+    "\n",
+    "따라서 ice['메로나']는 딕셔너리 ice에서 '메로나'라는 키에 해당하는 값을 반환합니다. \n",
+    "\n",
+    "이렇게 반환된 값은 \"메로나의 가격: \"라는 문자열과 함께 출력됩니다.\n",
+    "\n",
+    "이 코드는 딕셔너리 ice에서 '메로나'의 가격을 출력하는 코드입니다. 이렇게 딕셔너리를 사용하면 키와 값을 쌍으로 저장하여 효율적으로 사용할 수 있습니다.\n",
+    "\n",
+    "```python\n",
+    "ice = {'메로나': 1000, '폴로포': 1200, '빵빠레': 1800, '죠스바': 1200, '월드콘': 1500}\n",
+    "\n",
+    "print(\"메로나의 가격:\", ice['메로나'])\n",
+    "```"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -302,13 +416,18 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "C2RyUgoTJKsF"
-   },
-   "outputs": [],
-   "source": []
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "정답 : ice[’메로나’] = 1300\n",
+    "\n",
+    "\n",
+    "ice['메로나'] = 1300은 딕셔너리 ice에서 '메로나'라는 키에 해당하는 값을 1300으로 변경합니다. \n",
+    "```python\n",
+    "ice['메로나'] = 1300\n",
+    "print(ice)\n",
+    "```"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -333,13 +452,29 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "7RyqlYwpJOp7"
-   },
-   "outputs": [],
-   "source": []
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "정답 : dict(zip(names, grades))\n",
+    "\n",
+    "\n",
+    "zip() 함수는 names와 grades 리스트를 한 쌍으로 묶어줍니다. \n",
+    "\n",
+    "즉, zip(names, grades)는 [(\"나이썬\", \"B\"), (\"김자바\", \"B\"), (\"김씨\", \"A\"), (\"박씨샵\", \"C\")]와 같은 형태의 값을 반환합니다.\n",
+    "\n",
+    "dict() 함수는 이 값을 딕셔너리로 변환합니다.\n",
+    "\n",
+    "```python\n",
+    "names = ['나이썬', '김자바', '김씨', '박씨샵']\n",
+    "grades = ['B', 'B', 'A', 'C']\n",
+    "\n",
+    "# zip() 함수를 사용하여 names와 grades를 결합하고 딕셔너리로 변환\n",
+    "result = dict(zip(names, grades))\n",
+    "\n",
+    "# 결과 출력\n",
+    "result = dict\n",
+    "```"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -367,11 +502,18 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
+   "cell_type": "markdown",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "source": [
+    "정답 : ice[”보석바”] = [650, 10]\n",
+    "\n",
+    "ice[\"보석바\"] = [650, 10]은 딕셔너리 ice에 '보석바'라는 새로운 키와 [650, 10]이라는 새로운 값을 추가합니다. \n",
+    "\n",
+    "```python\n",
+    "ice['보석바'] = [650, 10]\n",
+    "print(ice)\n",
+    "```"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -394,13 +536,19 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "m5m-a09iLVbO"
-   },
-   "outputs": [],
-   "source": []
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "정답 : ice.keys()\n",
+    "\n",
+    "ice.keys()는 딕셔너리 ice의 모든 키를 반환합니다. list() 함수를 사용하여 이를 리스트로 변환 후 출력합니다.\n",
+    "\n",
+    "```python\n",
+    "ice = {'메로나': 1000, '폴로포': 1200, '빵빠레': 1800, '죠스바': 1200, '월드콘': 1500}\n",
+    "\n",
+    "print(list(ice.keys()))\n",
+    "```"
+   ]
   }
  ],
  "metadata": {
@@ -419,4 +567,3 @@
  "nbformat": 4,
  "nbformat_minor": 0
 }
- 
